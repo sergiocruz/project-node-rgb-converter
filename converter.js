@@ -20,22 +20,15 @@ function rgbToHex(rgb) {
 }
 
 /**
- * Pads hex code
+ * Converts HEX strings to RGB Arrays
  * @param  {String} hex
- * @return {String}
+ * @return {Array<Number>}
  */
-function padHex(hex) {
-  return (hex.length === 1 ? "0" + hex : hex);
-}
-
-
 function hexToRgb(hex) {
 
-  hex = hex.split('');
-
-  const redHex = hex[0] + hex[1];
+  const redHex   = hex[0] + hex[1];
   const greenHex = hex[2] + hex[3];
-  const blueHex = hex[4] + hex[5];
+  const blueHex  = hex[4] + hex[5];
 
   return [
     parseInt(redHex, 16),
@@ -44,4 +37,14 @@ function hexToRgb(hex) {
   ];
 
   return rgbArr;
+}
+
+
+/**
+ * Pads HEX Code
+ * @param  {String} hex
+ * @return {String}
+ */
+function padHex(hex) {
+  return (hex.length === 1 ? '0' + hex : hex);
 }
