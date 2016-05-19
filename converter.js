@@ -4,7 +4,7 @@ module.exports = {
 }
 
 /**
- * Converts RGB color to its Hexidecimal representation
+ * Converts RGB color to its Hexadecimal representation
  * @param  {Array<Number>}  The RGB Array
  * @return {String}
  */
@@ -35,8 +35,6 @@ function hexToRgb(hex) {
     parseInt(greenHex, 16),
     parseInt(blueHex, 16),
   ];
-
-  return rgbArr;
 }
 
 
